@@ -24,3 +24,25 @@ Bu yapının klasik tek dosyalık scriptlere göre sağladığı kritik avantajl
 Sistemi çalıştırmak için `Flask` ve `requests` kütüphanelerinin yüklü olması gerekir:
 ```bash
 pip install flask requests
+Adım Adım Kullanım
+API Server'ı Başlat (Enable Server):
+İlk olarak server.py dosyasını çalıştırın. Sunucu varsayılan olarak 5000 portu üzerinden dinlemeye başlar.
+
+Bash
+python server.py
+Arayüz Üzerinden Sorgula (Client Interface):
+Sunucu aktifken client_interface.py dosyasını çalıştırın. Bu program, API üzerinden sunucuya "Sistem durumu nedir?" sorusunu soracak ve yanıtı ekrana yazdıracaktır.
+
+Bash
+python client_interface.py
+📊 3. Bölüm: Sistem İşleyişi (Logic)
+Notlarımda belirttiğim "Program arayüzü ile sorduk" mantığı şu şekilde işlemektedir:
+
+API Endpoint (/get_detection): Sunucu, otonom sistemden gelen koordinat ve tespit verilerini JSON formatında hazır tutar.
+
+HTTP GET Request: İstemci, bu adrese bir istek gönderir.
+
+JSON Response: Sunucu, o anki güncel veriyi paketleyip istemciye döner.
+
+🎓 Hazırlayan
+Elif Perincek 
